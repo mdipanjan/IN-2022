@@ -1,5 +1,6 @@
 package com.mdipanjan;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -20,6 +21,10 @@ public class Main {
         customArray.insert(10);
         customArray.removeAt(5);
         System.out.println(customArray.indexOf(9));
-//        customArray.print();
+        customArray.print();
+
+        ArrayList<Integer> list = new ArrayList<>(10);
+        list.add(10);
+        System.out.println(list);
     }
 }

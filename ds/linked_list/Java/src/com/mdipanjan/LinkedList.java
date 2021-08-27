@@ -63,6 +63,7 @@ public class LinkedList {
 
 
     }
+
     // Problems
     //LinkedList -> Array
     public int [] toArray(int size){
