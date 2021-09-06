@@ -11,21 +11,21 @@ public class Main {
        queue.add(10);
         queue.add(20);
         queue.add(30);
-        reverser(queue);
+        System.out.println(reverser(queue));
+        
     }
     // Reverse a QUEUE
-    public static void reverser(Queue<Integer> queue){
+    public static Queue<Integer> reverser(Queue<Integer> queue){
         Stack<Integer> store = new Stack<>();
-
-        queue.forEach(item->{
+        while (!queue.isEmpty()){
             int l = queue.remove();
             store.push(l);
-        });
+        }
         while(!store.isEmpty()){
             int k = store.pop();
-            System.out.println(k);
+            queue.add(k);
         }
-
+        return queue;
 
     }
 }
