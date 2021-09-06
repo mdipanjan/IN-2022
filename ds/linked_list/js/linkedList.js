@@ -152,13 +152,23 @@ class LinkedList{
     this.tail.next = null;
     this.head = prevNode;
   }
+  lenCheck(){
+    let len = 0;
+    let current = this.head;
+    while(current !== null){
+      current = current.next;
+      len++;
+    }
+    console.log(len)
+    return len;
+  }
 }
 
 let list = new LinkedList();
 list.append(10);
 list.append(20);
 list.append(30);
-list.append(40);
+// list.append(40);
 // list.prepend(5);
 // list.removeFirst();
 // list.removeLast();
@@ -166,4 +176,5 @@ list.append(40);
 // list.insertAt(90, 1);
 // list.reverseIterative();
 list.print();
+list.lenCheck()
 // console.log(list.sizeofList());
