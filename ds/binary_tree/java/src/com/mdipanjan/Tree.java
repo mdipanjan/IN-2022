@@ -9,7 +9,8 @@ public class Tree {
             this.value = value;
         }
     }
-    private Node root;
+    public Node root;
+    // Insert an element into the tree
     public void insert(int value){
         if(root == null){
             root = new Node(value);
@@ -32,6 +33,7 @@ public class Tree {
             }
         }
     }
+    // Find an element from the tree
     public boolean find(int value){
         Node current = root;
         while (current != null){
@@ -44,5 +46,44 @@ public class Tree {
             }
         }
         return false;
+    }
+    // Depth First Search - (Depth First Traversal)
+    // - Preorder =>  root -> left -> right
+    // - Inorder =>   left -> root -> right
+    // - Postorder => left -> right -> root
+    public void preOrderTraversal(){
+        preOrderTraversal(root);
+    }
+    private void preOrderTraversal(Node root){
+        if(root == null){
+            return;
+        }
+        System.out.println(root.value);
+        preOrderTraversal(root.leftChild);
+        preOrderTraversal(root.rightChild);
+    }
+
+    public void inOrderTraversal(){
+        inOrderTraversal(root);
+    }
+    private void inOrderTraversal(Node root){
+        if(root == null){
+            return;
+        }
+        inOrderTraversal(root.leftChild);
+        System.out.println(root.value);
+        inOrderTraversal(root.rightChild);
+    }
+
+    public void postOrderTraversal(){
+        postOrderTraversal(root);
+    }
+    private void postOrderTraversal(Node root){
+        if(root == null){
+            return;
+        }
+        postOrderTraversal(root.leftChild);
+        postOrderTraversal(root.rightChild);
+        System.out.println(root.value);
     }
 }
