@@ -9,11 +9,13 @@ public class Main {
         bst.insert(10);
         bst.insert(12);
         bst.insert(15);
+        bst.insert(14);
         bst.insert(9);
-//        System.out.println(bst.find(92));
+        System.out.println(bst.find(9));
 //        bst.preOrderTraversal();
 //        bst.inOrderTraversal();
-        bst.postOrderTraversal();
+//        bst.postOrderTraversal()
+        System.out.println(bst.height());
     }
 
 }
